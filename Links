@@ -27,3 +27,6 @@ https://stackoverflow.com/questions/16503599/how-do-i-load-and-store-global-vari
 
 http://localhost:8080/BankApp/webapi/banks/get_all_banks?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city_name=MUMBAI
 http://localhost:8080/BankApp/webapi/branch/get_branch_detail?ifsc=ABHY0065010
+
+
+https://devcenter.heroku.com/articles/war-deployment
