@@ -10,7 +10,25 @@
 	<name>BankApp</name>
 
 
-
+	<build>
+		<finalName>BankApp</finalName>
+		<plugins>
+			<plugin>
+				<!-- <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-compiler-plugin</artifactId> 
+					<version>2.5.1</version> -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<!-- <executions> <execution> <id>copy-dependencies</id> <phase>package</phase> 
+					<goals> <goal>copy-dependencies</goal> </goals> </execution> </executions> -->
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencyManagement>
 		<dependencies>
@@ -53,32 +71,14 @@
 			<version>20160810</version> </dependency> -->
 
 		<!-- ALl are for Hibernate -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-			<version>4.3.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate.common</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<version>4.0.4.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>4.3.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.1-api</artifactId>
-			<version>1.0.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.3</version>
-			<type>maven-plugin</type>
-		</dependency>
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-c3p0</artifactId> 
+			<version>4.3.0.Final</version> </dependency> <dependency> <groupId>org.hibernate.common</groupId> 
+			<artifactId>hibernate-commons-annotations</artifactId> <version>4.0.4.Final</version> 
+			</dependency> <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> 
+			<version>4.3.0.Final</version> </dependency> <dependency> <groupId>org.hibernate.javax.persistence</groupId> 
+			<artifactId>hibernate-jpa-2.1-api</artifactId> <version>1.0.0.Final</version> 
+			</dependency> -->
+
 
 	</dependencies>
 	<properties>
@@ -86,28 +86,5 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk>1.8</jdk>
 	</properties>
-	<build>
-		<finalName>BankApp</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.5</version>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-					</execution>
-				</executions>
-				<inherited>true</inherited>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+
 </project>
